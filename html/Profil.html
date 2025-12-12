@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vision & Mission - Universitas Teknokrat Indonesia</title>
+    <!-- import file vision-mission-styles.css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../vision-mission-styles.css"
+    />
+    <!-- tag meta untuk responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- buat favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- buat area menu -->
+    <nav class="navigation">
+      <button class="tombol" onclick="home()">Home</button>
+      <button class="tombol" onclick="profil()">Profile</button>
+      <button class="tombol" onclick="academic()">Academic</button>
+      <button class="tombol" onclick="facility()">Facility</button>
+      <button class="tombol" onclick="admission()">Admission</button>
+      <button class="tombol" onclick="scholarship()">Scholarship</button>
+      <button class="tombol" onclick="studentAffairs()">Student Affairs</button>
+      <button class="tombol" onclick="onlineApplicationForm()">
+        Online Application Form
+      </button>
+      <button class="tombol" onclick="downloadFiles()">Download Files</button>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Vision, Mission & Goals</h1>
+      <p>Program Studi S1 Teknologi Informasi</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="vision-mission-container">
+      <!-- Vision Section -->
+      <section class="section-card">
+        <h2 class="section-title">Vision</h2>
+        <div class="vision-content">
+          "To become an excellent and international standard study program in
+          Indonesia by 2030 which focuses on the areas of governance and
+          information technology infrastructure and plays an active role in
+          Nation Development through Education, Research and Community Service".
+        </div>
+      </section>
+
+      <!-- Mission and Goals Two Column Layout -->
+      <div class="two-column-layout">
+        <!-- Missions Section -->
+        <section class="section-card">
+          <h2 class="section-title">Missions</h2>
+          <ul class="mission-list">
+            <li>
+              Providing professional, quality, creative and innovative education
+              that excels in design, governance, and information technology
+              infrastructure.
+            </li>
+            <li>
+              Conducting research in the areas of governance and information
+              technology infrastructure to support the development of science,
+              information, and communication technology
+            </li>
+            <li>
+              Organizing community service programs in the field of information
+              technology to produce applied products that can be used to improve
+              community welfare
+            </li>
+            <li>
+              Developing human resources and quality study programs through
+              collaboration with various institutions in domestic and foreign
+            </li>
+          </ul>
+        </section>
+
+        <!-- Goals Section (in two-column) -->
+        <section class="section-card">
+          <h2 class="section-title">Goals</h2>
+          <ul class="goals-list">
+            <li>
+              Producing graduates who can compete in the world of work and are
+              skilled, independent, creative, and innovative in governance and
+              quality information technology infrastructure.
+            </li>
+            <li>
+              Producing graduates who can develop their potential to meet market
+              needs or to build their own business
+            </li>
+            <li>
+              Producing graduates who play an active role in information
+              technology to support nation development through quality
+              education, research, and community service
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Highlight Box -->
+      <div class="highlight-box">
+        <h3>Excellence in Information Technology Education</h3>
+        <p>
+          Committed to producing world-class graduates who are innovative,
+          competitive, and ready to contribute to national development
+        </p>
+      </div>
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <h4>🎓 About Our Program</h4>
+        <p>
+          The Information Technology Study Program at Universitas Teknokrat
+          Indonesia is designed to meet international standards while addressing
+          local and national needs. We focus on governance and IT
+          infrastructure, preparing our students to become leaders in the
+          digital transformation era.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tentang UTI</h3>
+          <ul>
+            <li>
+              <a href="https://teknokrat.ac.id/" target="_blank"
+                >Tentang Universitas</a
+              >
+            </li>
+            <li>
+              <a href="https://ftik.teknokrat.ac.id/" target="_blank"
+                >Fakultas Teknik</a
+              >
+            </li>
+            <li>
+              <a href="https://teknokrat.ac.id/accreditation/" target="_blank"
+                >Akreditasi</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <ul>
+            <li>
+              <a href="https://siakad.teknokrat.ac.id/" target="_blank"
+                >Sistem Informasi Akademik</a
+              >
+            </li>
+            <li>
+              <a href="https://perpustakaan.teknokrat.ac.id/" target="_blank"
+                >Perpustakaan</a
+              >
+            </li>
+            <li>
+              <a href="http://e-parent.teknokrat.ac.id/" target="_blank"
+                >e-Parent</a
+              >
+            </li>
+            <li>
+              <a href="https://ejurnal.teknokrat.ac.id/" target="_blank"
+                >e-Journal</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <ul>
+            <li>Jl. ZA. Pagar Alam No.9-11</li>
+            <li>Labuhan Ratu, Bandar Lampung</li>
+            <li>Telp: (0721) 702022</li>
+            <li>Email: info@teknokrat.ac.id</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Universitas Teknokrat Indonesia. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- fungsi js -->
+    <script>
+      // fungsi untuk tombol home
+      function home() {
+        location.href = "Home.html";
+      }
+      // fungsi ke halaman profil
+      function profil() {
+        location.href = "Profil.html";
+      }
+      // fungsi ke halaman academic
+      function academic() {
+        location.href = "Academic.html";
+      }
+      // fungsi ke halaman facility
+      function facility() {
+        location.href = "Facility.html";
+      }
+      // fungsi ke halaman admission
+      function admission() {
+        location.href = "Admission.html";
+      }
+      // fungsi ke halaman scholarship
+      function scholarship() {
+        location.href = "Scholarship.html";
+      }
+      // fungsi ke halaman student affairs
+      function studentAffairs() {
+        location.href = "StudentAffairs.html";
+      }
+      // fungsi ke halaman online application form
+      function onlineApplicationForm() {
+        location.href = "OnlineApplicationForm.html";
+      }
+      // fungsi ke halaman download files
+      function downloadFiles() {
+        location.href = "DownloadFiles.html";
+      }
+    </script>
+  </body>
+</html>

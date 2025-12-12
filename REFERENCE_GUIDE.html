@@ -1,0 +1,461 @@
+<!-- 
+  CONTOH ADVANCED: Carousel dengan Auto-Play dan Multiple Carousels
+  Untuk reference jika ingin menambah fitur advanced di kemudian hari
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Carousel Example - Student Affairs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8f9fa;
+        padding: 20px;
+      }
+
+      .demo-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .demo-section {
+        background: white;
+        padding: 40px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #8b0000;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #c41e3a;
+        margin: 20px 0 10px 0;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .code-example {
+        background: #f9f9f9;
+        border-left: 4px solid #c41e3a;
+        padding: 15px;
+        margin: 15px 0;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feature-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .feature-list li:before {
+        content: "✓ ";
+        color: #c41e3a;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      .note {
+        background: #fffbea;
+        border-left: 4px solid #f39c12;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 3px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background: #8b0000;
+        color: white;
+      }
+
+      tr:hover {
+        background: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-container">
+      <h1>🎨 Advanced Carousel Reference Guide</h1>
+
+      <!-- Section 1: Basic Structure -->
+      <div class="demo-section">
+        <h2>1. HTML Structure</h2>
+        <p>Struktur HTML dasar untuk carousel:</p>
+        <div class="code-example">
+          <pre>
+&lt;div class="carousel-wrapper" id="carouselContainer"&gt;
+  &lt;div class="carousel"&gt;
+    &lt;div class="carousel-item active"&gt;
+      &lt;img src="image1.jpg" alt="Slide 1" /&gt;
+      &lt;h2&gt;Judul Slide 1&lt;/h2&gt;
+      &lt;p&gt;Deskripsi...&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="carousel-item"&gt;
+      &lt;img src="image2.jpg" alt="Slide 2" /&gt;
+      &lt;h2&gt;Judul Slide 2&lt;/h2&gt;
+      &lt;p&gt;Deskripsi...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Tambah lebih banyak item sesuai kebutuhan --&gt;
+  &lt;/div&gt;
+
+  &lt;div class="carousel-controls"&gt;
+    &lt;button class="carousel-btn prev"&gt;❮&lt;/button&gt;
+    &lt;div class="carousel-indicators"&gt;
+      &lt;span class="dot active"&gt;&lt;/span&gt;
+      &lt;span class="dot"&gt;&lt;/span&gt;
+      &lt;span class="dot"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class="carousel-counter"&gt;1 / 3&lt;/span&gt;
+    &lt;button class="carousel-btn next"&gt;❯&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre
+          >
+        </div>
+      </div>
+
+      <!-- Section 2: JavaScript Class -->
+      <div class="demo-section">
+        <h2>2. JavaScript Class Methods</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Parameter</th>
+              <th>Deskripsi</th>
+              <th>Contoh</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>next()</td>
+              <td>-</td>
+              <td>Slide berikutnya</td>
+              <td>carousel.next()</td>
+            </tr>
+            <tr>
+              <td>prev()</td>
+              <td>-</td>
+              <td>Slide sebelumnya</td>
+              <td>carousel.prev()</td>
+            </tr>
+            <tr>
+              <td>goToSlide()</td>
+              <td>index: number</td>
+              <td>Pindah ke slide tertentu</td>
+              <td>carousel.goToSlide(2)</td>
+            </tr>
+            <tr>
+              <td>updateCarousel()</td>
+              <td>-</td>
+              <td>Update posisi carousel</td>
+              <td>carousel.updateCarousel()</td>
+            </tr>
+            <tr>
+              <td>autoPlay()</td>
+              <td>-</td>
+              <td>Mulai auto-play</td>
+              <td>carousel.autoPlay()</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 3: CSS Classes -->
+      <div class="demo-section">
+        <h2>3. CSS Classes Reference</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Class Name</th>
+              <th>Fungsi</th>
+              <th>Properties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.carousel-wrapper</td>
+              <td>Container carousel</td>
+              <td>Border-radius, shadow, overflow</td>
+            </tr>
+            <tr>
+              <td>.carousel</td>
+              <td>Wrapper slides</td>
+              <td>Flexbox, transform, transition</td>
+            </tr>
+            <tr>
+              <td>.carousel-item</td>
+              <td>Individual slide</td>
+              <td>Min-width 100%, padding, text</td>
+            </tr>
+            <tr>
+              <td>.carousel-btn</td>
+              <td>Control buttons</td>
+              <td>Circular, hover effect, color</td>
+            </tr>
+            <tr>
+              <td>.dot</td>
+              <td>Indicator dots</td>
+              <td>Circle shape, active state</td>
+            </tr>
+            <tr>
+              <td>.carousel-counter</td>
+              <td>Position counter</td>
+              <td>Text display, font size</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 4: Customization Examples -->
+      <div class="demo-section">
+        <h2>4. Contoh Kustomisasi</h2>
+
+        <h3>A. Menambah Slide Baru</h3>
+        <div class="code-example">
+          <pre>
+// Tambahkan HTML slide baru:
+&lt;div class="carousel-item"&gt;
+  &lt;img src="../Kumpulan foto/gambar-baru.jpg" alt="Slide Baru" /&gt;
+  &lt;h2&gt;Judul Slide Baru&lt;/h2&gt;
+  &lt;h3&gt;Subtitle&lt;/h3&gt;
+  &lt;p&gt;Deskripsi slide baru...&lt;/p&gt;
+&lt;/div&gt;
+
+// Tambahkan dot indicator:
+&lt;span class="dot"&gt;&lt;/span&gt;</pre
+          >
+        </div>
+
+        <h3>B. Mengubah Warna Button</h3>
+        <div class="code-example">
+          <pre>
+/* Di student-affairs-styles.css */
+.carousel-btn {
+  background: #c41e3a;  /* Warna lama */
+  /* Ubah menjadi: */
+  background: #003366;  /* Warna biru baru */
+}</pre
+          >
+        </div>
+
+        <h3>C. Membuat Auto-Play</h3>
+        <div class="code-example">
+          <pre>
+// Di student-affairs.js, uncomment:
+init() {
+  // ... existing code ...
+  this.autoPlay();  // Auto-play setiap 5 detik
+}</pre
+          >
+        </div>
+
+        <h3>D. Mengubah Ukuran Gambar</h3>
+        <div class="code-example">
+          <pre>
+/* Di student-affairs-styles.css */
+.carousel-item img {
+  max-height: 400px;  /* Ubah nilai ini */
+  /* Contoh: 300px untuk lebih kecil */
+  /* Contoh: 500px untuk lebih besar */
+}</pre
+          >
+        </div>
+      </div>
+
+      <!-- Section 5: Advanced Features -->
+      <div class="demo-section">
+        <h2>5. Fitur Advanced (Optional)</h2>
+
+        <h3>A. Keyboard Navigation</h3>
+        <div class="code-example">
+          <pre>
+// Tambahkan di student-affairs.js:
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') carousel.prev();
+  if (e.key === 'ArrowRight') carousel.next();
+});</pre
+          >
+        </div>
+
+        <h3>B. Touch/Swipe Support</h3>
+        <div class="code-example">
+          <pre>
+// Untuk mobile swipe (menggunakan Hammer.js atau custom):
+let startX = 0;
+carousel.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+carousel.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX > endX) carousel.next();
+  if (startX < endX) carousel.prev();
+});</pre
+          >
+        </div>
+
+        <h3>C. Pause Auto-Play on Hover</h3>
+        <div class="code-example">
+          <pre>
+// Tambahkan di student-affairs.js:
+carousel.addEventListener('mouseenter', () => {
+  // Pause auto-play saat hover
+});
+
+carousel.addEventListener('mouseleave', () => {
+  // Resume auto-play saat mouse out
+});</pre
+          >
+        </div>
+      </div>
+
+      <!-- Section 6: Common Modifications -->
+      <div class="demo-section">
+        <h2>6. Modifikasi Umum</h2>
+        <ul class="feature-list">
+          <li>Menambah lebih dari 5 slide</li>
+          <li>Mengubah warna carousel</li>
+          <li>Mengaktifkan auto-play</li>
+          <li>Menambah keyboard navigation</li>
+          <li>Implementasi swipe untuk mobile</li>
+          <li>Mengubah ukuran/layout carousel</li>
+          <li>Menambah transition effects baru</li>
+          <li>Integrasi dengan database/CMS</li>
+        </ul>
+
+        <div class="note">
+          <strong>💡 Tips:</strong> Selalu test di DevTools (F12) setelah
+          modifikasi untuk memastikan tidak ada JavaScript errors di Console.
+        </div>
+      </div>
+
+      <!-- Section 7: Best Practices -->
+      <div class="demo-section">
+        <h2>7. Best Practices</h2>
+        <ul class="feature-list">
+          <li>Gunakan semantic HTML5 elements</li>
+          <li>Mobile-first responsive design</li>
+          <li>Optimize images sebelum upload</li>
+          <li>Test di berbagai browsers</li>
+          <li>Gunakan CSS Grid/Flexbox untuk layout</li>
+          <li>Avoid inline styles, gunakan CSS classes</li>
+          <li>Minify CSS & JS untuk production</li>
+          <li>Implement lazy loading untuk gambar</li>
+          <li>Ensure accessibility (ARIA labels)</li>
+          <li>Keep code DRY (Don't Repeat Yourself)</li>
+        </ul>
+      </div>
+
+      <!-- Section 8: Troubleshooting -->
+      <div class="demo-section">
+        <h2>8. Troubleshooting Checklist</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Check</th>
+              <th>Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carousel tidak jalan</td>
+              <td>Script ter-link?</td>
+              <td>Cek &lt;script src="..."&gt; tag</td>
+            </tr>
+            <tr>
+              <td>Gambar tidak muncul</td>
+              <td>Path benar?</td>
+              <td>Verifikasi ../Kumpulan foto/nama.jpg</td>
+            </tr>
+            <tr>
+              <td>Styling berantakan</td>
+              <td>CSS ter-link?</td>
+              <td>Clear cache Ctrl+Shift+Del</td>
+            </tr>
+            <tr>
+              <td>Buttons tidak clickable</td>
+              <td>z-index layering?</td>
+              <td>Tambah z-index di CSS</td>
+            </tr>
+            <tr>
+              <td>Mobile responsive error</td>
+              <td>Meta viewport tag?</td>
+              <td>Pastikan ada viewport tag</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 9: File References -->
+      <div class="demo-section">
+        <h2>9. File Reference Quick Links</h2>
+        <ul class="feature-list">
+          <li>StudentAffairs.html - Main HTML file</li>
+          <li>student-affairs-styles.css - All styling</li>
+          <li>student-affairs.js - JavaScript functionality</li>
+          <li>DOKUMENTASI_STUDENT_AFFAIRS.md - Full documentation</li>
+          <li>PANDUAN_KUSTOMISASI.md - Step-by-step guides</li>
+          <li>SUMMARY.md - Project overview</li>
+          <li>Kumpulan foto/ - All images folder</li>
+        </ul>
+
+        <div class="note">
+          <strong>📝 Note:</strong> Semua file sudah terintegrasi dan siap
+          pakai. Tidak perlu install library eksternal apapun!
+        </div>
+      </div>
+
+      <!-- Section 10: Next Steps -->
+      <div class="demo-section">
+        <h2>10. Next Steps</h2>
+        <ol style="padding-left: 20px">
+          <li>Buka StudentAffairs.html di browser</li>
+          <li>Test semua functionality (prev, next, dots)</li>
+          <li>Test responsive design (F12 → Responsive Mode)</li>
+          <li>Customize sesuai kebutuhan (warna, gambar, teks)</li>
+          <li>Baca dokumentasi untuk advanced modifications</li>
+          <li>Test di berbagai browser dan devices</li>
+          <li>Deploy atau integrasikan ke website</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

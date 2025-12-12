@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Program Studi Teknologi Informasi - Universitas Teknokrat Indonesia
+    </title>
+    <!-- import file eksternal.css -->
+    <link rel="stylesheet" type="text/css" href="../eksternal.css" />
+    <link rel="stylesheet" type="text/css" href="../style-hero.css" />
+    <link rel="stylesheet" type="text/css" href="../home-styles.css" />
+    <!-- tag meta untuk responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- buat favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- buat area menu -->
+    <nav class="nav-horizontal">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" onclick="home()" class="active">
+            🏠 Home
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            🎓 Profile <span class="dropdown-arrow">▼</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="javascript:void(0)" onclick="history()">History</a>
+            <a href="javascript:void(0)" onclick="profil()">Vision & Mission</a>
+            <a href="javascript:void(0)" onclick="ppm()"
+              >Profil Profesional Mandiri (PPM)</a
+            >
+            <a href="javascript:void(0)" onclick="cpl()"
+              >Capaian Pembelajaran Lulusan (CPL)</a
+            >
+            <a href="javascript:void(0)">Organizational Structure</a>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            🎓 Academic <span class="dropdown-arrow">▼</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="javascript:void(0)" onclick="academic()">Curriculum</a>
+            <a href="javascript:void(0)">Accreditation</a>
+            <a href="javascript:void(0)">Graduate Profile</a>
+            <a href="javascript:void(0)">E-Learning</a>
+            <a href="javascript:void(0)">SIAKAD</a>
+            <a href="javascript:void(0)">Journals</a>
+            <a href="javascript:void(0)">Competence Based</a>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            ⚙️ Facility <span class="dropdown-arrow">▼</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="javascript:void(0)" onclick="facility()">Library</a>
+            <a href="javascript:void(0)">Facility Campus</a>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="admission()"> 📝 Admission </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="scholarship()">
+            🎓 Scholarship
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="studentAffairs()">
+            👥 Student Affairs
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="onlineApplicationForm()">
+            📋 Online Application Form
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="downloadFiles()">
+            💾 Download Files
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <div class="hero-text">
+          <img src="../ext/logo.png" alt="Logo UTI" class="hero-logo" />
+          <h1>Program Studi<br />Teknologi Informasi</h1>
+          <p class="subtitle">JOIN US</p>
+          <a href="javascript:void(0)" onclick="admission()" class="cta-button"
+            >Daftar Sekarang</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="main-container">
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="icon">🎯</div>
+          <h3>Terakreditasi</h3>
+          <p>
+            Program studi dengan akreditasi unggul dan standar internasional
+          </p>
+        </div>
+        <div class="stat-card">
+          <div class="icon">👨‍🎓</div>
+          <h3>Lulusan Berkualitas</h3>
+          <p>Menghasilkan lulusan yang siap bersaing di dunia kerja</p>
+        </div>
+        <div class="stat-card">
+          <div class="icon">🏆</div>
+          <h3>Prestasi Gemilang</h3>
+          <p>Meraih berbagai penghargaan tingkat nasional dan internasional</p>
+        </div>
+        <div class="stat-card">
+          <div class="icon">💼</div>
+          <h3>Karir Cemerlang</h3>
+          <p>Peluang karir luas di bidang IT dan teknologi informasi</p>
+        </div>
+      </div>
+
+      <!-- Content with Sidebar -->
+      <div class="content-with-sidebar">
+        <!-- Sidebar Menu -->
+        <div class="sidebar-menu">
+          <button class="menu-item active">
+            Program Studi Teknologi Informasi
+          </button>
+          <button class="menu-item">Kurikulum 2021</button>
+          <button class="menu-item">Program Educational Objectives</button>
+          <button class="menu-item">Student Outcomes</button>
+          <button class="menu-item">OBE Program Studi</button>
+          <button class="menu-item">Data Lulusan</button>
+          <button class="menu-item">Peluang Karir</button>
+          <button class="menu-item">Dosen</button>
+          <button class="menu-item">Akreditasi</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="program-section">
+          <div class="section-title">
+            <h2>Program Studi S1 Teknologi Informasi</h2>
+            <div class="underline"></div>
+          </div>
+
+          <div class="program-content">
+            <div class="program-box">
+              <h3>STUDY PROGRAM OF INFORMATION TECHNOLOGY</h3>
+              <p>
+                The Information Study Program of Technology at FTIK-UTI is a
+                study program that was established in conjunction with the
+                establishment of Universitas Teknokrat Indonesia which was
+                established by the Ministry of Research, Technology and Higher
+                Education Number 44/KPT/I/2017 dated January 19, 2017.
+              </p>
+            </div>
+
+            <div class="program-box">
+              <h3>VISION</h3>
+              <p>
+                "To become an excellent and international standard study program
+                in Indonesia by 2030 which focuses on the areas of governance
+                and information technology infrastructure and plays an active
+                role in Nation Development through Education, Research and
+                Community Service".
+              </p>
+            </div>
+
+            <div class="program-box">
+              <h3>MISSION</h3>
+              <ul>
+                <li>
+                  Providing professional, quality, creative and innovative
+                  education that excels in design, governance, and information
+                  technology infrastructure.
+                </li>
+                <li>
+                  Conducting research in the areas of governance and information
+                  technology infrastructure to support the development of
+                  science, information, and communication technology
+                </li>
+                <li>
+                  Organizing community service programs in the field of
+                  information technology to produce applied products that can be
+                  used to improve community welfare
+                </li>
+                <li>
+                  Developing human resources and quality study programs through
+                  collaboration with various institutions in domestic and
+                  foreign
+                </li>
+              </ul>
+            </div>
+
+            <div class="program-box">
+              <h3>GOALS</h3>
+              <ul>
+                <li>
+                  Producing graduates who can compete in the world of work and
+                  are skilled, independent, creative, and innovative in
+                  governance and quality information technology infrastructure.
+                </li>
+                <li>
+                  Producing graduates who can develop their potential to meet
+                  market needs or to build their own business
+                </li>
+                <li>
+                  Producing graduates who play an active role in information
+                  technology to support nation development through quality
+                  education, research, and community service.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Section -->
+      <div class="news-section">
+        <div class="section-title">
+          <h2>Berita Terkini</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="news-grid">
+          <div class="news-card">
+            <div class="news-image">📱</div>
+            <div class="news-content">
+              <h4>
+                10 Hal Yang Perlu Disiapkan Untuk Memulai Karier Yang Sukses di
+                Bidang IT
+              </h4>
+              <p>
+                Sebelum memulai karier di bidang IT, ada beberapa hal yang perlu
+                Anda siapkan...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">🏆</div>
+            <div class="news-content">
+              <h4>
+                Keren! Universitas Teknokrat Indonesia Kembali Raih Peringkat 1
+                Internasional Impact Webometrics
+              </h4>
+              <p>
+                Universitas Teknokrat Indonesia meraih prestasi gemilang dengan
+                kembali kembali menempati peringkat 1...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">💻</div>
+            <div class="news-content">
+              <h4>Perbedaan Android Developer dan Web Developer</h4>
+              <p>
+                Android Developer dan Web Developer adalah dua peran yang
+                berbeda dalam dunia pengembangan perangkat...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">🤖</div>
+            <div class="news-content">
+              <h4>Simak 4 Alat AI yang Dapat Digunakan untuk Penelitian</h4>
+              <p>
+                Dalam era digital yang semakin maju, kecerdasan buatan (AI)
+                telah mengubah cara kita melakukan banyak...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">🗄️</div>
+            <div class="news-content">
+              <h4>
+                Mengenal Fungsi dan Perintah Dasar dari Bahasa Pemrograman SQL
+              </h4>
+              <p>
+                Bahasa pemrograman SQL (Structured Query Language) adalah bahasa
+                pemrograman yang digunakan untuk me...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">🔒</div>
+            <div class="news-content">
+              <h4>Keamanan Informasi: Pentingnya Melindungi Data Anda</h4>
+              <p>
+                Keamanan informasi adalah suatu upaya melindungi informasi dari
+                akses yang tidak sah, penggunaan yan...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- buat area footer -->
+    <div class="footer">
+      <p>Copyright &copy; 2025 - Universitas Teknokrat Indonesia</p>
+    </div>
+
+    <!-- fungsi js -->
+    <script>
+      // fungsi untuk tombol home
+      function home() {
+        location.href = "Home.html";
+      }
+      // fungsi ke halaman history
+      function history() {
+        location.href = "History.html";
+      }
+      // fungsi ke halaman profil (vision mission)
+      function profil() {
+        location.href = "Profil.html";
+      }
+      // fungsi ke halaman profil profesional mandiri
+      function ppm() {
+        location.href = "PPM.html";
+      }
+      // fungsi ke halaman capaian pembelajaran lulusan
+      function cpl() {
+        location.href = "CPL.html";
+      }
+      // fungsi ke halaman academic
+      function academic() {
+        location.href = "Academic.html";
+      }
+      // fungsi ke halaman facility
+      function facility() {
+        location.href = "Facility.html";
+      }
+      // fungsi ke halaman admission
+      function admission() {
+        location.href = "Admission.html";
+      }
+      // fungsi ke halaman scholarship
+      function scholarship() {
+        location.href = "Scholarship.html";
+      }
+      // fungsi ke halaman student affairs
+      function studentAffairs() {
+        location.href = "StudentAffairs.html";
+      }
+      // fungsi ke halaman online application form
+      function onlineApplicationForm() {
+        location.href = "OnlineApplicationForm.html";
+      }
+      // fungsi ke halaman download files
+      function downloadFiles() {
+        location.href = "DownloadFiles.html";
+      }
+    </script>
+  </body>
+</html>

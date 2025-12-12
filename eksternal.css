@@ -1,0 +1,182 @@
+/* import font */
+/* font 1*/
+@font-face {
+  font-family: "f1";
+  src: url("ext/font1.ttf");
+}
+/* font 2*/
+@font-face {
+  font-family: "f2";
+  src: url("ext/font2.ttf");
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  min-height: 100px;
+  width: 100%;
+  background: url("ext/logo.png") no-repeat center center #ffcccc;
+  color: #333333;
+}
+.navigation {
+  min-height: 50px;
+  width: 100%;
+  background: #2e27e1;
+  font: 14px "f1";
+  color: #ffffff;
+}
+.navigation > .tombol {
+  background: #ffffff;
+  color: #e8659b;
+  height: 40px;
+  margin: 5px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px #ffffff;
+}
+.navigation > .tombol:hover {
+  background: #e3e3e3;
+  color: #333333;
+}
+.content {
+  min-height: 450px;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+}
+.content > .side {
+  width: 25%;
+  background: #d3d3d3;
+  min-height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  /* perataan (vertical) ke atas / top */
+  align-content: flex-start;
+  /* gunakan "align-content" untuk jumlah object > 1 */
+  /* gunakan "align-items" untuk jumlah object = 1 (contoh: selector "footer") */
+  /* gunakan "align-self" untuk object tertentu (contoh: selector "logo") */
+}
+.content > .side > .logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 38%;
+  /* total lebar = 40%
+       1% (padding-left) + 1% (padding-right) + 38% (width) */
+
+  /* perataan object "logo" (vertical) ke tengah / center */
+  align-self: center;
+}
+
+/* styling figure */
+.content > .side > .logo > figure {
+  width: 100%;
+  margin-left: 0px;
+  text-align: center;
+}
+/* styling figcaption */
+.content > .side > .logo > figure > figcaption {
+  text-align: center;
+  padding: 3px;
+  font: 14px "f1";
+}
+
+.content > .side > .text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 2%;
+  width: 58%;
+  /* total lebar = 60%
+       2% (padding-right) + 58% (width) */
+  text-align: justify;
+}
+.content > .side > .garis {
+  border-bottom: 1px dashed #333333;
+  width: 100%;
+}
+
+.content > .main {
+  width: 71%;
+  padding: 10px 2%;
+  /* total lebar = 75%
+       2% (padding-left) + 2% (padding-right) + 71% (width) */
+  background: #ffffff;
+  min-height: 450px;
+  text-align: justify;
+  font: 16px f1;
+}
+.footer {
+  background: #ffcccc;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  /* perataan (vertical) ke tengah / center */
+  align-items: center;
+  /* perataan (horizontal) ke tengah / center */
+  justify-content: center;
+  font: 14px f2;
+}
+
+/* buat responsive */
+@media (max-width: 1024px) {
+  .header {
+    background: url("ext/logo.png") no-repeat center center #ffcc00;
+  }
+
+  .navigation {
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content > .side {
+    width: 96%;
+    padding: 15px 2%;
+    /* total lebar = 100%
+           2% (padding-left) + 2% (padding-right) + 96% (width) */
+    min-height: 100px;
+  }
+
+  .content > .main {
+    width: 96%;
+    padding: 15px 2%;
+    /* total lebar = 100%
+           2% (padding-left) + 2% (padding-right) + 96% (width) */
+  }
+
+  .content > .side > .logo {
+    width: 13%;
+    padding: 0%;
+    /* total lebar = 30%
+	       2% (padding-left) + 28% (width) */
+  }
+
+  .content > .side > .text {
+    width: 87%;
+    padding: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: url("ext/logo.png") no-repeat center center #ff0000;
+  }
+
+  .content > .side > .logo {
+    width: 20%;
+    padding: 0%;
+    /* total lebar = 30%
+	       2% (padding-left) + 28% (width) */
+  }
+
+  .content > .side > .text {
+    width: 80%;
+    padding: 0%;
+  }
+}

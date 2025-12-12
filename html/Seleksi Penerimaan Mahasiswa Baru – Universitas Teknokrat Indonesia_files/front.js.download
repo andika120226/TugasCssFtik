@@ -1,0 +1,17 @@
+/*!*
+ **                 _     _                         
+ ** __      ___ __ | |   (_)_ __   __ _ _   _  __ _ 
+ ** \ \ /\ / / '_ \| |   | | '_ \ / _` | | | |/ _` |
+ **  \ V  V /| |_) | |___| | | | | (_| | |_| | (_| |
+ **   \_/\_/ | .__/|_____|_|_| |_|\__, |\__,_|\__,_|
+ **          |_|                  |___/             
+ **
+ **        -- wpLingua | WordPress plugin --
+ **   Translate and make your website multilingual
+ **
+ **     https://github.com/julien-jacob/wplingua
+ **      https://wordpress.org/plugins/wplingua/
+ **              https://wplingua.com/
+ **
+ **/
+jQuery(document).ready(function(a){function t(){let o=a(window).height()/2;a(".wplng-switcher.style-dropdown").each(function(t){var n,e;a(this).offset().top-a(window).scrollTop()<o?a(this).hasClass("open-bottom")||(a(this).addClass("open-bottom"),a(this).removeClass("open-top"),e=a(".wplng-languages",this).prop("outerHTML"),n=a(".wplng-language-current",this).prop("outerHTML"),a(".switcher-content",this).html(n+e)):a(this).hasClass("open-top")||(a(this).addClass("open-top"),a(this).removeClass("open-bottom"),n=a(".wplng-languages",this).prop("outerHTML"),e=a(".wplng-language-current",this).prop("outerHTML"),a(".switcher-content",this).html(n+e))})}var n;function e(){var t=parseInt(a("#wplng-in-progress-percent").html());t<99&&(t++,a("#wplng-in-progress-percent").html(t),a("#wplng-progress-bar-value").attr("style","width: "+t.toString()+"%"))}a("a[data-wplng-flag][data-wplng-alt]").each(function(){var t="",t=(t=(t=(t+="<img")+(' src="'+a(this).attr("data-wplng-flag")+'" '))+(' alt="'+a(this).attr("data-wplng-alt")+'" '))+' class="wplng-menu-flag"'+"> ";a(this).html(t+a(this).html()),a(this).removeAttr("data-wplng-flag"),a(this).removeAttr("data-wplng-alt")}),a(window).scroll(function(){t()}),a("#wplng_style").on("input",function(){t()}),t(),a("#wplng-in-progress-container").length&&(n=a("#wplng-in-progress-container").attr("wplng-load"))&&a.ajax({url:n,method:"GET",success:function(t){var n=a("#wplng-in-progress-container").attr("wplng-reload");n&&""!==n.trim()&&(window.location.href=n)}}),e(),a("#wplng-in-progress-percent").length&&setInterval(e,2e3),a("#wpadminbar").length&&a("#wplng-in-progress-container").length&&a("#wpadminbar").hide(),a("#wplng-overloaded-close").on("click",function(){a("#wplng-overloaded-container").hide()})});//# sourceMappingURL=front.js.map

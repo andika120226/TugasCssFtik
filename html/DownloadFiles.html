@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Download Files - Universitas Teknokrat Indonesia</title>
+    <!-- import file download-files-styles.css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../download-files-styles.css"
+    />
+    <!-- tag meta untuk responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- buat favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- buat area menu -->
+    <div class="navigation">
+      <button class="tombol" onclick="home()">Home</button>
+      <button class="tombol" onclick="profil()">Profile</button>
+      <button class="tombol" onclick="academic()">Academic</button>
+      <button class="tombol" onclick="facility()">Facility</button>
+      <button class="tombol" onclick="admission()">Admission</button>
+      <button class="tombol" onclick="scholarship()">Scholarship</button>
+      <button class="tombol" onclick="studentAffairs()">Student Affairs</button>
+      <button class="tombol" onclick="onlineApplicationForm()">
+        Online Application Form
+      </button>
+      <button class="tombol" onclick="downloadFiles()">Download Files</button>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Download Files</h1>
+    </div>
+
+    <!-- Main Container with Sidebar and Content -->
+    <div class="download-container">
+      <!-- Sidebar Categories -->
+      <aside class="download-sidebar">
+        <div class="category-item active" data-category="statement-letter">
+          Statement Letter and Student Data
+        </div>
+        <div class="category-item" data-category="student-guide">
+          Student Guide
+        </div>
+        <div class="category-item" data-category="standard-procedures">
+          Standard Operating Procedures
+        </div>
+        <div class="category-item" data-category="class-schedule">
+          Class Schedule
+        </div>
+        <div class="category-item" data-category="final-exams">Final Exams</div>
+        <div class="category-item" data-category="announcement">
+          Announcement
+        </div>
+        <div class="category-item" data-category="guidance-certificate">
+          Guidance Certificate
+        </div>
+        <div class="category-item" data-category="academic-calendar">
+          Academic Calendar
+        </div>
+        <div class="category-item" data-category="accreditation">
+          Accreditation Certificate
+        </div>
+        <div class="category-item" data-category="forms">Forms</div>
+      </aside>
+
+      <!-- Content Area -->
+      <main class="download-content">
+        <!-- Statement Letter and Student Data -->
+        <section id="statement-letter" class="content-section active">
+          <h2 class="content-title">Statement Letter and Student Data</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">Surat Pernyataan Mahasiswa</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">Data Mahasiswa</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>📌 Informasi Penting</h4>
+            <p>
+              Pastikan mengisi dokumen dengan lengkap dan benar. Dokumen yang
+              telah diunduh wajib ditandatangani dan dikembalikan ke bagian
+              akademik.
+            </p>
+          </div>
+        </section>
+
+        <!-- Student Guide -->
+        <section id="student-guide" class="content-section">
+          <h2 class="content-title">Student Guide</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Panduan Mahasiswa Baru 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">Panduan Penggunaan SIAKAD</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">Panduan KRS Online</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">4.</div>
+                <div class="download-title">Panduan E-Learning</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>📚 Catatan</h4>
+            <p>
+              Bacalah panduan mahasiswa dengan seksama untuk memahami prosedur
+              dan kebijakan akademik di Universitas Teknokrat Indonesia.
+            </p>
+          </div>
+        </section>
+
+        <!-- Standard Operating Procedures -->
+        <section id="standard-procedures" class="content-section">
+          <h2 class="content-title">Standard Operating Procedures</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">SOP Pengajuan Sidang Proposal</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">SOP Pengajuan Sidang Skripsi</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">SOP Pengajuan Cuti Akademik</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">4.</div>
+                <div class="download-title">SOP Peminjaman Ruangan</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Class Schedule -->
+        <section id="class-schedule" class="content-section">
+          <h2 class="content-title">Class Schedule</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Jadwal Kuliah Semester Ganjil 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">
+                  Jadwal Kuliah Semester Genap 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">Jadwal Praktikum Laboratorium</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>⏰ Perhatian</h4>
+            <p>
+              Jadwal dapat berubah sewaktu-waktu. Silakan cek SIAKAD secara
+              berkala untuk update jadwal terbaru.
+            </p>
+          </div>
+        </section>
+
+        <!-- Final Exams -->
+        <section id="final-exams" class="content-section">
+          <h2 class="content-title">Final Exams</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Jadwal UTS Semester Ganjil 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">
+                  Jadwal UAS Semester Ganjil 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">Ketentuan Ujian Akhir Semester</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Announcement -->
+        <section id="announcement" class="content-section">
+          <h2 class="content-title">Announcement</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Pengumuman Wisuda Periode Desember 2024
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">
+                  Pengumuman Beasiswa Tahun Ajaran 2024/2025
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">Pengumuman PKKMB 2024</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Guidance Certificate -->
+        <section id="guidance-certificate" class="content-section">
+          <h2 class="content-title">Guidance Certificate</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">Form Kartu Bimbingan Skripsi</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">Form Kartu Bimbingan PKL</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">Sertifikat Bimbingan Akademik</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>✍️ Panduan</h4>
+            <p>
+              Kartu bimbingan wajib diisi dan ditandatangani oleh dosen
+              pembimbing setiap kali melakukan konsultasi.
+            </p>
+          </div>
+        </section>
+
+        <!-- Academic Calendar -->
+        <section id="academic-calendar" class="content-section">
+          <h2 class="content-title">Academic Calendar</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Kalender Akademik 2024/2025 Ganjil
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">
+                  Kalender Akademik 2024/2025 Genap
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>📅 Informasi</h4>
+            <p>
+              Kalender akademik berisi jadwal penting seperti masa perkuliahan,
+              UTS, UAS, libur, dan kegiatan akademik lainnya.
+            </p>
+          </div>
+        </section>
+
+        <!-- Accreditation Certificate -->
+        <section id="accreditation" class="content-section">
+          <h2 class="content-title">Accreditation Certificate</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">
+                  Sertifikat Akreditasi Program Studi Teknologi Informasi
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">
+                  Sertifikat Akreditasi Institusi UTI
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>🏆 Informasi Akreditasi</h4>
+            <p>
+              Universitas Teknokrat Indonesia telah terakreditasi dengan baik
+              oleh BAN-PT sebagai jaminan kualitas pendidikan.
+            </p>
+          </div>
+        </section>
+
+        <!-- Forms -->
+        <section id="forms" class="content-section">
+          <h2 class="content-title">Forms</h2>
+
+          <ul class="download-list">
+            <li>
+              <div class="download-info">
+                <div class="download-number">1.</div>
+                <div class="download-title">Form Pengajuan Sidang Proposal</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">2.</div>
+                <div class="download-title">Form Pengajuan Sidang Skripsi</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">3.</div>
+                <div class="download-title">
+                  Form Pengajuan Transkrip Sementara
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">4.</div>
+                <div class="download-title">Form Pengajuan Judul Proposal</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">5.</div>
+                <div class="download-title">Form Pengajuan Cuti</div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">6.</div>
+                <div class="download-title">
+                  Form Pengajuan Sidang PKL Informatika
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+            <li>
+              <div class="download-info">
+                <div class="download-number">7.</div>
+                <div class="download-title">
+                  Form Pengajuan Transkrip ACC Nol SKS Informatika
+                </div>
+              </div>
+              <a href="#" class="download-btn">Download</a>
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>📋 Petunjuk Penggunaan</h4>
+            <p>
+              Isi formulir dengan lengkap dan jelas. Serahkan formulir yang
+              telah diisi ke bagian akademik atau dosen pembimbing sesuai
+              keperluan.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tentang UTI</h3>
+          <ul>
+            <li>
+              <a href="https://teknokrat.ac.id/" target="_blank"
+                >Tentang Universitas</a
+              >
+            </li>
+            <li>
+              <a href="https://ftik.teknokrat.ac.id/" target="_blank"
+                >Fakultas Teknik</a
+              >
+            </li>
+            <li>
+              <a href="https://teknokrat.ac.id/accreditation/" target="_blank"
+                >Akreditasi</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <ul>
+            <li>
+              <a href="https://siakad.teknokrat.ac.id/" target="_blank"
+                >Sistem Informasi Akademik</a
+              >
+            </li>
+            <li>
+              <a href="https://perpustakaan.teknokrat.ac.id/" target="_blank"
+                >Perpustakaan</a
+              >
+            </li>
+            <li>
+              <a href="http://e-parent.teknokrat.ac.id/" target="_blank"
+                >e-Parent</a
+              >
+            </li>
+            <li>
+              <a href="https://ejurnal.teknokrat.ac.id/" target="_blank"
+                >e-Journal</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <ul>
+            <li>Jl. ZA. Pagar Alam No.9-11</li>
+            <li>Labuhan Ratu, Bandar Lampung</li>
+            <li>Telp: (0721) 702022</li>
+            <li>Email: info@teknokrat.ac.id</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Universitas Teknokrat Indonesia. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../download-files.js"></script>
+  </body>
+</html>

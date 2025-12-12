@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Information - Universitas Teknokrat Indonesia</title>
+  
+  <!-- Import CSS Files -->
+  <link rel="stylesheet" type="text/css" href="../eksternal.css" />
+  <link rel="stylesheet" type="text/css" href="../scholarship-styles.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-horizontal">
+    <ul>
+      <li><a href="javascript:void(0)" onclick="home()">🏠 Home</a></li>
+      <li><a href="javascript:void(0)" onclick="profil()">👤 Profile</a></li>
+      <li><a href="javascript:void(0)">📋 Admission ▼</a></li>
+      <li><a href="javascript:void(0)" class="active">🎓 Scholarship</a></li>
+      <li><a href="javascript:void(0)">📚 Programs ▼</a></li>
+      <li><a href="javascript:void(0)">📰 News ▼</a></li>
+      <li><a href="javascript:void(0)">🛠️ Services ▼</a></li>
+      <li><a href="javascript:void(0)">🎉 Teknokrat Festival</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-scholarship">
+    <div class="hero-content">
+      <h1>Scholarship</h1>
+      <p>Guarantee your education</p>
+    </div>
+  </section>
+
+  <!-- Carousel Container -->
+  <div class="carousel-container">
+    <div class="carousel-wrapper" id="scholarshipCarousel">
+      <div class="carousel">
+        <!-- Slide 1: Beasiswa Atlet & Siswa Berprestasi -->
+        <div class="carousel-item">
+          <img src="../Kumpulan foto/pmbteknokrat-13062023-0008.jpg" alt="Beasiswa Atlet & Siswa Berprestasi" />
+        </div>
+
+        <!-- Slide 2: Beasiswa KIP-Kuliah -->
+        <div class="carousel-item">
+          <img src="../Kumpulan foto/beasiswa-kip.jpg" alt="Beasiswa KIP-Kuliah" />
+        </div>
+
+        <!-- Slide 3: Kuliah Gratis dan Uang Saku -->
+        <div class="carousel-item">
+          <img src="../Kumpulan foto/kuliah-kip.jpg" alt="Kuliah Gratis dan Uang Saku" />
+        </div>
+
+        <!-- Slide 4: PMB Teknokrat -->
+        <div class="carousel-item">
+          <img src="../Kumpulan foto/pmbteknokrat-13062023-0012.jpg" alt="Penerimaan Mahasiswa Baru" />
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+        <div class="carousel-indicators">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="carousel-counter">1 / 4</span>
+        <button class="carousel-btn next" aria-label="Next slide">❯</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Section - Beasiswa Kampus Teknokrat -->
+  <section class="info-section">
+    <h2>Beasiswa Kampus Teknokrat</h2>
+    <div class="divider"></div>
+    
+    <div class="info-content">
+      <!-- Card 1: Beasiswa Prestasi Akademik -->
+      <div class="info-card">
+        <div class="icon">🏆</div>
+        <h3>Beasiswa Prestasi Akademik</h3>
+        <p>Diberikan kepada siswa dengan prestasi akademik yang luar biasa.</p>
+        <ul>
+          <li>Juara 1-3 Olimpiade Nasional/Internasional</li>
+          <li>Nilai rata-rata rapor minimal 85</li>
+          <li>Bebas biaya kuliah hingga 100%</li>
+          <li>Uang saku bulanan</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Beasiswa Atlet -->
+      <div class="info-card">
+        <div class="icon">⚽</div>
+        <h3>Beasiswa Atlet Berprestasi</h3>
+        <p>Untuk atlet yang berprestasi di tingkat regional, nasional, atau internasional.</p>
+        <ul>
+          <li>Juara 1-3 kejuaraan resmi</li>
+          <li>Aktif dalam kegiatan olahraga</li>
+          <li>Potongan biaya kuliah 50-100%</li>
+          <li>Fasilitas training gratis</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Beasiswa KIP-Kuliah -->
+      <div class="info-card">
+        <div class="icon">💼</div>
+        <h3>Beasiswa KIP-Kuliah</h3>
+        <p>Program beasiswa pemerintah untuk siswa kurang mampu dengan prestasi baik.</p>
+        <ul>
+          <li>Lulusan SMA/SMK/MA tahun 2022-2023</li>
+          <li>Hafal Qur'an minimal 5 Juz</li>
+          <li>Melakukan pendaftaran online</li>
+          <li>Biaya pendaftaran Rp 400.000</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: Beasiswa Kemitraan -->
+      <div class="info-card">
+        <div class="icon">🤝</div>
+        <h3>Beasiswa Kemitraan</h3>
+        <p>Beasiswa dari berbagai institusi dan perusahaan mitra kampus.</p>
+        <ul>
+          <li>Beasiswa dari perusahaan</li>
+          <li>Program magang terjamin</li>
+          <li>Kesempatan kerja setelah lulus</li>
+          <li>Networking luas</li>
+        </ul>
+      </div>
+
+      <!-- Card 5: Beasiswa Hafiz Qur'an -->
+      <div class="info-card">
+        <div class="icon">📖</div>
+        <h3>Beasiswa Hafiz Qur'an</h3>
+        <p>Khusus untuk siswa yang hafal Al-Qur'an dengan jumlah tertentu.</p>
+        <ul>
+          <li>Hafal minimal 5 Juz</li>
+          <li>Lulus tahap seleksi</li>
+          <li>Potongan hingga 100%</li>
+          <li>Bimbingan intensif tahfidz</li>
+        </ul>
+      </div>
+
+      <!-- Card 6: Beasiswa Anak Guru/Dosen -->
+      <div class="info-card">
+        <div class="icon">👨‍🏫</div>
+        <h3>Beasiswa Anak Pendidik</h3>
+        <p>Program khusus untuk anak guru dan dosen sebagai apresiasi profesi.</p>
+        <ul>
+          <li>Anak guru/dosen aktif</li>
+          <li>Surat keterangan resmi</li>
+          <li>Potongan biaya 30-50%</li>
+          <li>Prioritas pendaftaran</li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="#" class="cta-button">Daftar Beasiswa Sekarang</a>
+  </section>
+
+  <!-- Achievement Section -->
+  <section class="achievement-section">
+    <h2>Universitas Teknokrat Indonesia</h2>
+    <div class="achievement-icon">🏅</div>
+    <p class="subtitle">Milestone Achievements</p>
+    <h3 class="achievement-text">The 10th Best Private ASEAN University</h3>
+    <p class="achievement-desc">AppliedHE Ranking</p>
+    <p class="achievement-desc">Private University Ranking (Singapore)</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Contact Section -->
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><strong>Universitas Teknokrat Indonesia</strong></p>
+        <ul>
+          <li>Jl. Zainal Abidin Pagaralam, No.9-11 Labuhan Ratu</li>
+          <li>Kota Bandar Lampung, Provinsi Lampung, 35132</li>
+        </ul>
+        <p style="margin-top: 15px;">
+          📞 (+62721) 702022 (Hunting)<br>
+          💬 +62 822-7992-0145 (Chat Only)<br>
+          📧 uti@teknokrat.ac.id
+        </p>
+      </div>
+
+      <!-- Units -->
+      <div class="footer-section">
+        <h3>Units</h3>
+        <ul>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Student Affair</a></li>
+          <li><a href="#">Quality Assurance</a></li>
+          <li><a href="#">Career and Training Center</a></li>
+          <li><a href="#">Pusat Inkubator Bisnis</a></li>
+          <li><a href="#">Satgas PPKT Teknokrat</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Academics</a></li>
+          <li><a href="#">Online Learning (SPADA)</a></li>
+          <li><a href="#">Competence Based Test</a></li>
+          <li><a href="#">e-Jurnal</a></li>
+          <li><a href="#">e-Parent</a></li>
+          <li><a href="#">e-Certificate</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+      </div>
+
+      <!-- Admission -->
+      <div class="footer-section">
+        <h3>Admission</h3>
+        <ul>
+          <li><a href="#">Register Now</a></li>
+          <li><a href="#">Tuition fee</a></li>
+          <li><a href="#" class="active">Scholarship</a></li>
+        </ul>
+        
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© COPYRIGHT 2025. ALL RIGHTS RESERVED BY UNIVERSITAS TEKNOKRAT INDONESIA</p>
+      <p style="margin-top: 5px;">
+        <a href="#" style="color: #ffd700;">🇮🇩 Indonesia</a> | 
+        <a href="#" style="color: #ffd700;">🇬🇧 English</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../scholarship.js"></script>
+  <script>
+    // Additional active nav highlight
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.nav-horizontal a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+        <div class="text">
+          Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks
+          2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2. Teks 2.
+          Teks 2.
+        </div>
+        <!-- area garis -->
+        <div class="garis"></div>
+
+        <!-- area logo -->
+        <div class="logo">
+          <img src="ext/foto.png" />
+        </div>
+        <!-- area text -->
+        <div class="text">
+          Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks
+          3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3. Teks 3.
+          Teks 3.
+        </div>
+        <!-- area garis -->
+        <div class="garis"></div>
+      </div>
+      <!-- area content (main) -->
+      <div class="main"></div>
+    </div>
+    <!-- buat area footer -->
+    <div class="footer">Footer (Copyright &copy; 2020)</div>
+
+    <!-- fungsi js -->
+    <script>
+      // fungsi untuk tombol home
+      function home() {
+        location.href = "Home.html";
+      }
+      // fungsi ke halaman profil
+      function profil() {
+        location.href = "Profil.html";
+      }
+      // fungsi ke halaman academic
+      function academic() {
+        location.href = "Academic.html";
+      }
+      // fungsi ke halaman facility
+      function facility() {
+        location.href = "Facility.html";
+      }
+      // fungsi ke halaman admission
+      function admission() {
+        location.href = "Admission.html";
+      }
+      // fungsi ke halaman scholarship
+      function scholarship() {
+        location.href = "Scholarship.html";
+      }
+      // fungsi ke halaman student affairs
+      function studentAffairs() {
+        location.href = "StudentAffairs.html";
+      }
+      // fungsi ke halaman online application form
+      function onlineApplicationForm() {
+        location.href = "OnlineApplicationForm.html";
+      }
+      // fungsi ke halaman download files
+      function downloadFiles() {
+        location.href = "DownloadFiles.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Affairs - Universitas Teknokrat Indonesia</title>
+
+    <!-- Import CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../eksternal.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../student-affairs-styles.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav-horizontal">
+      <ul>
+        <li><a href="javascript:void(0)" onclick="home()">🏠 Home</a></li>
+        <li><a href="javascript:void(0)" onclick="profil()">👤 Profil</a></li>
+        <li><a href="javascript:void(0)">📋 Layanan ▼</a></li>
+        <li><a href="javascript:void(0)">ℹ️ Informasi ▼</a></li>
+        <li>
+          <a href="javascript:void(0)" onclick="academic()"
+            >📚 Organisasi Mahasiswa</a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="admission()">🏆 Kompetisi</a>
+        </li>
+        <li><a href="javascript:void(0)">📅 Agenda</a></li>
+        <li>
+          <a href="javascript:void(0)" class="active"
+            >🎉 Teknokrat Festival 2025</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="carousel-container">
+      <div class="carousel-wrapper" id="carouselContainer">
+        <div class="carousel">
+          <!-- Slide 1: UKM Programmer -->
+          <div class="carousel-item active">
+            <img
+              src="../Kumpulan foto/UKM-PROGRAMMER.jpg"
+              alt="UKM Programmer"
+            />
+            <h2>UKM Programmer</h2>
+            <h3>Unit Kegiatan Mahasiswa (UKM)</h3>
+            <p>
+              UKM Programmer adalah organisasi mahasiswa yang berfokus pada
+              pengembangan skill pemrograman dan teknologi terkini. Melalui UKM
+              ini, mahasiswa dapat belajar, berbagi ilmu, dan mengembangkan
+              proyek-proyek teknologi inovatif bersama dengan rekan-rekan
+              sepemikiran.
+            </p>
+            <p>
+              Kami menyediakan workshop, seminar, dan kesempatan untuk
+              berpartisipasi dalam berbagai kompetisi pemrograman nasional
+              maupun internasional.
+            </p>
+          </div>
+
+          <!-- Slide 2: UKM Islam -->
+          <div class="carousel-item">
+            <img src="../Kumpulan foto/UKM-ISLAM.jpg" alt="UKM Islam" />
+            <h2>UKM Islam</h2>
+            <h3>Unit Kegiatan Mahasiswa (UKM)</h3>
+            <p>
+              UKM Islam berkomitmen untuk mengembangkan keimanan dan ketakwaan
+              mahasiswa Muslim di kampus Universitas Teknokrat Indonesia.
+              Organisasi ini mengadakan berbagai kegiatan spiritual, dakwah, dan
+              pemberdayaan masyarakat.
+            </p>
+            <p>
+              Melalui program-program rutin seperti kajian ilmu, shalat
+              berjamaah, dan kegiatan sosial, kami membangun generasi muda yang
+              beriman dan berbudi pekerti luhur.
+            </p>
+          </div>
+
+          <!-- Slide 3: UKM Tari -->
+          <div class="carousel-item">
+            <img src="../Kumpulan foto/UKM-TARI.jpg" alt="UKM Tari" />
+            <h2>UKM Tari</h2>
+            <h3>Unit Kegiatan Mahasiswa (UKM)</h3>
+            <p>
+              UKM Tari adalah komunitas bagi mahasiswa yang gemar
+              mengekspresikan diri melalui seni tari. Kami mempelajari berbagai
+              jenis tari tradisional dan modern, serta menciptakan
+              pertunjukan-pertunjukan yang memukau.
+            </p>
+            <p>
+              Setiap anggota memiliki kesempatan untuk mengembangkan bakat seni
+              dan menampilkan karya mereka di berbagai acara kampus dan undangan
+              pihak luar.
+            </p>
+          </div>
+
+          <!-- Slide 4: UKM HIDATE -->
+          <div class="carousel-item">
+            <img src="../Kumpulan foto/UKM-HIDATE.jpg" alt="UKM HIDATE" />
+            <h2>UKM HIDATE</h2>
+            <h3>Unit Kegiatan Mahasiswa (UKM)</h3>
+            <p>
+              HIDATE (Himpunan Mahasiswa Desain Grafis Universitas Teknokrat
+              Indonesia) adalah organisasi khusus bagi mahasiswa yang passionate
+              dalam bidang desain grafis dan seni visual. Kami mengembangkan
+              kreativitas dan skill desain mahasiswa.
+            </p>
+            <p>
+              Melalui workshop, kompetisi desain, dan kolaborasi dengan industri
+              kreatif, kami mempersiapkan mahasiswa menjadi desainer profesional
+              yang kompeten dan inovatif.
+            </p>
+          </div>
+
+          <!-- Slide 5: Layanan Kemahasiswaan -->
+          <div class="carousel-item">
+            <img
+              src="../Kumpulan foto/BCommX.png"
+              alt="Layanan Kemahasiswaan"
+            />
+            <h2>Layanan Kemahasiswaan</h2>
+            <h3>Dukungan Penuh untuk Mahasiswa</h3>
+            <p>
+              Direktorat Kemahasiswaan menyediakan berbagai layanan komprehensif
+              untuk mendukung pengembangan akademik dan personal mahasiswa,
+              meliputi:
+            </p>
+            <p>
+              ✓ Layanan Konseling dan Bimbingan Karir<br />
+              ✓ Informasi Beasiswa dan Bantuan Finansial<br />
+              ✓ Layanan Kesehatan dan Wellness<br />
+              ✓ Program Pengembangan Kepemimpinan<br />
+              ✓ Fasilitas Olahraga dan Rekreasi
+            </p>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+          <button class="carousel-btn prev" aria-label="Previous slide">
+            ❮
+          </button>
+          <div class="carousel-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="carousel-counter">1 / 5</span>
+          <button class="carousel-btn next" aria-label="Next slide">❯</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <h2 class="section-title">Layanan Kami</h2>
+
+      <div class="cards-grid">
+        <!-- Card 1: Organisasi Kemahasiswaan -->
+        <div class="service-card">
+          <img src="../Kumpulan foto/TI.jpg" alt="Organisasi Kemahasiswaan" />
+          <div class="service-card-content">
+            <h3>Organisasi Kemahasiswaan</h3>
+            <p>
+              Tempat mahasiswa mengembangkan bakat dan keterampilan melalui
+              berbagai Unit Kegiatan Mahasiswa (UKM) yang beragam dan inovatif.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Layanan Konseling -->
+        <div class="service-card">
+          <img
+            src="../Kumpulan foto/alur-pendaftaran.jpg"
+            alt="Layanan Konseling"
+          />
+          <div class="service-card-content">
+            <h3>Layanan Konseling</h3>
+            <p>
+              Layanan konseling profesional untuk membantu mahasiswa mengatasi
+              tantangan akademik dan personal yang dihadapi.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Informasi Beasiswa -->
+        <div class="service-card">
+          <img
+            src="../Kumpulan foto/jadwal-pendaftaran.png"
+            alt="Informasi Beasiswa"
+          />
+          <div class="service-card-content">
+            <h3>Informasi Beasiswa</h3>
+            <p>
+              Informasi lengkap tentang berbagai program beasiswa untuk membantu
+              mahasiswa berprestasi melanjutkan pendidikan mereka.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Prestasi Mahasiswa -->
+        <div class="service-card">
+          <img
+            src="../Kumpulan foto/Desain-tanpa-judul.png"
+            alt="Prestasi Mahasiswa"
+          />
+          <div class="service-card-content">
+            <h3>Prestasi Mahasiswa</h3>
+            <p>
+              Menampilkan pencapaian dan prestasi luar biasa yang telah diraih
+              oleh mahasiswa Universitas Teknokrat Indonesia.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Inovasi dan Kewirausahaan -->
+        <div class="service-card">
+          <img
+            src="../Kumpulan foto/faq-1.png"
+            alt="Inovasi dan Kewirausahaan"
+          />
+          <div class="service-card-content">
+            <h3>Inovasi & Kewirausahaan</h3>
+            <p>
+              Program pengembangan inovasi dan kewirausahaan untuk mendorong
+              mahasiswa menciptakan solusi kreatif dan bisnis yang
+              berkelanjutan.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Pengabdian Kepada Masyarakat -->
+        <div class="service-card">
+          <img src="../Kumpulan foto/XZXZ-X.png" alt="Pengabdian Masyarakat" />
+          <div class="service-card-content">
+            <h3>Pengabdian Masyarakat</h3>
+            <p>
+              Program pengabdian mahasiswa kepada masyarakat untuk memberdayakan
+              dan memberikan dampak sosial yang positif.
+            </p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Contact Section -->
+        <div class="footer-section">
+          <h3>📍 Hubungi Kami</h3>
+          <p><strong>Direktorat Kemahasiswaan</strong></p>
+          <p>
+            Jl. Z.A. Pagaralam, No.9-11 Labuhan Ratu<br />Kota Bandar Lampung,
+            Lampung 35132
+          </p>
+          <p>
+            📞 (0721) 702022 (Hunting)<br />
+            💬 0858-3051-2141 (Chat Only)<br />
+            📧 uti@teknokrat.ac.id
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>🔗 Tautan Cepat</h3>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="home()">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="profil()">Profil</a></li>
+            <li>
+              <a href="javascript:void(0)" onclick="academic()">Akademik</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="facility()">Fasilitas</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="admission()">Penerimaan</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="scholarship()">Beasiswa</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>📱 Ikuti Kami</h3>
+          <p>
+            Tetap terhubung dengan kami di media sosial untuk update terbaru dan
+            informasi penting.
+          </p>
+          <div class="social-links">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Twitter">𝕏</a>
+            <a href="#" title="YouTube">▶</a>
+            <a href="#" title="Instagram">📷</a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="footer-section">
+          <h3>ℹ️ Tentang Kami</h3>
+          <p>
+            Direktorat Kemahasiswaan Universitas Teknokrat Indonesia berkomitmen
+            untuk mengembangkan mahasiswa yang tidak hanya unggul secara
+            akademik, tetapi juga memiliki karakter, integritas, dan jiwa
+            kepemimpinan yang kuat.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; Copyright 2025 - Direktorat Kemahasiswaan | Universitas
+          Teknokrat Indonesia. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../student-affairs.js"></script>
+    <script>
+      // Add active nav highlight
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-horizontal a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+/* Home Page Styles - Universitas Teknokrat Indonesia */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%);
+  padding: 80px 50px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: rgba(56, 178, 172, 0.1);
+  transform: rotate(45deg);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(56, 178, 172, 0.15);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text .subtitle {
+  font-size: 24px;
+  color: #38b2ac;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero-text .cta-button {
+  display: inline-block;
+  background: white;
+  color: #1e3a5f;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: #38b2ac;
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: -50px auto 50px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Program Section */
+.program-section {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e3a5f;
+  margin-bottom: 15px;
+}
+
+.section-title .underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #38b2ac, #1e3a5f);
+  margin: 0 auto;
+}
+
+.program-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.program-box {
+  padding: 30px;
+  background: #f7fafc;
+  border-radius: 15px;
+  border-left: 5px solid #38b2ac;
+}
+
+.program-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+}
+
+.program-box p {
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.program-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.program-box ul li {
+  padding: 12px 0 12px 35px;
+  color: #2d3748;
+  line-height: 1.7;
+  position: relative;
+}
+
+.program-box ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #38b2ac;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Content Layout with Sidebar */
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  background: #2c5282;
+  border-radius: 15px;
+  overflow: hidden;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-menu .menu-item {
+  background: #2c5282;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 18px 25px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar-menu .menu-item:hover {
+  background: #1e3a5f;
+  padding-left: 30px;
+}
+
+.sidebar-menu .menu-item.active {
+  background: #1e3a5f;
+  border-left: 5px solid #38b2ac;
+  font-weight: 700;
+}
+
+.sidebar-menu .menu-item::before {
+  content: "▸";
+  font-size: 20px;
+  color: #38b2ac;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #38b2ac, #1e3a5f);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card .icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.stat-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* News Section */
+.news-section {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background: #f7fafc;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.news-card .news-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #1e3a5f, #38b2ac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+}
+
+.news-card .news-content {
+  padding: 25px;
+}
+
+.news-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.news-card p {
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 50px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text .subtitle {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .content-with-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-menu {
+    position: static;
+    border-radius: 10px;
+  }
+
+  .program-section,
+  .news-section {
+    padding: 40px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+}

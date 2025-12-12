@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Online Application Form - Universitas Teknokrat Indonesia</title>
+    <!-- import file online-application-styles.css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../online-application-styles.css"
+    />
+    <!-- tag meta untuk responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- buat favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- buat area menu -->
+    <div class="navigation">
+      <button class="tombol" onclick="home()">Home</button>
+      <button class="tombol" onclick="profil()">Profile</button>
+      <button class="tombol" onclick="academic()">Academic</button>
+      <button class="tombol" onclick="facility()">Facility</button>
+      <button class="tombol" onclick="admission()">Admission</button>
+      <button class="tombol" onclick="scholarship()">Scholarship</button>
+      <button class="tombol" onclick="studentAffairs()">Student Affairs</button>
+      <button class="tombol" onclick="onlineApplicationForm()">
+        Online Application Form
+      </button>
+      <button class="tombol" onclick="downloadFiles()">Download Files</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Online Application Form</h1>
+        <p>
+          Daftar sekarang dan raih kesempatan emas untuk menjadi bagian dari
+          Universitas Teknokrat Indonesia
+        </p>
+        <a
+          href="http://spmb.teknokrat.ac.id/"
+          class="hero-button"
+          target="_blank"
+          >Daftar Sekarang</a
+        >
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+      <!-- Alur Pendaftaran Section -->
+      <section class="application-section">
+        <h2 class="section-title">A. Alur Pendaftaran</h2>
+        <div class="section-content">
+          <p>
+            Calon Mahasiswa/i dapat mendaftar secara offline atau online dengan
+            mengunjungi website
+            <strong
+              ><a
+                href="http://spmb.teknokrat.ac.id/"
+                target="_blank"
+                style="color: #c41e3a; text-decoration: none"
+                >spmb.teknokrat.ac.id</a
+              ></strong
+            >
+          </p>
+
+          <p style="margin-top: 20px; font-weight: 600">
+            Berikut ini adalah Alur Pendaftaran Mahasiswa Baru:
+          </p>
+
+          <div class="flow-image">
+            <img
+              src="../Kumpulan foto/alur-pendaftaran.jpg"
+              alt="Alur Pendaftaran Mahasiswa Baru"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Cara Membuat Akun Section -->
+      <section class="application-section">
+        <h2 class="section-title">B. Cara Membuat Akun</h2>
+        <div class="section-content">
+          <p>
+            Membuat akun pendaftaran dengan mengisikan alamat email, nomor HP
+            dan password.
+          </p>
+
+          <ul class="steps-list">
+            <li data-step="1">
+              Login/Masuk ke sistem dengan mengisikan nomor HP dan password yang
+              didaftarkan.
+            </li>
+            <li data-step="2">
+              Lengkapi data pendaftaran: jalur pendaftaran, program studi, dan
+              waktu kuliah.
+            </li>
+            <li data-step="3">
+              Membayar biaya pendaftaran melalui Virtual Account yang tertera di
+              halaman.
+            </li>
+            <li data-step="4">
+              Setelah Pembayaran di Approve, Lakukan Ujian Test Masuk secara
+              online.
+            </li>
+            <li data-step="5">
+              Setelah dinyatakan lulus lakukan pembayaran daftar ulang dan
+              lengkapi berkas persyaratan.
+            </li>
+          </ul>
+
+          <div class="info-box">
+            <h4>💡 Tips Penting</h4>
+            <p>
+              Pastikan email dan nomor HP yang Anda daftarkan aktif, karena akan
+              digunakan untuk komunikasi selama proses pendaftaran.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Biaya Section -->
+      <section class="application-section">
+        <h2 class="section-title">C. Biaya Pendaftaran & PKKMB</h2>
+
+        <div class="price-cards">
+          <div class="price-card">
+            <h3>Biaya Pendaftaran</h3>
+            <div class="price-amount">Rp 400.000,-</div>
+            <div class="price-details">
+              <p>
+                Biaya pendaftaran berlaku untuk semua jurusan di Universitas
+                Teknokrat Indonesia.
+              </p>
+            </div>
+          </div>
+
+          <div class="price-card">
+            <h3>Biaya PKKMB</h3>
+            <div class="price-amount">Rp 1.000.000,-</div>
+            <div class="price-details">
+              <p><strong>Meliputi:</strong></p>
+              <ul
+                style="text-align: left; padding-left: 20px; margin-top: 15px"
+              >
+                <li>PKKMB</li>
+                <li>Kemahasiswaan</li>
+                <li>KTM (Kartu Tanda Mahasiswa)</li>
+                <li>Jas Almamater</li>
+                <li>Perpustakaan</li>
+                <li>Asuransi Kecelakaan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h4>📋 Catatan Pembayaran</h4>
+          <p>
+            Pembayaran dapat dilakukan melalui Virtual Account yang akan
+            diberikan setelah pendaftaran. Simpan bukti pembayaran untuk proses
+            verifikasi.
+          </p>
+        </div>
+      </section>
+
+      <!-- Jadwal Penerimaan Section -->
+      <section class="application-section">
+        <h2 class="section-title">D. Jadwal Penerimaan</h2>
+        <div class="section-content">
+          <p style="font-weight: 600; margin-bottom: 25px">
+            Berikut ini adalah jadwal Penerimaan Mahasiswa Baru Tahun Ajaran
+            2024/2025:
+          </p>
+
+          <div class="flow-image">
+            <img
+              src="../Kumpulan foto/jadwal-pendaftaran.png"
+              alt="Jadwal Penerimaan Mahasiswa Baru 2024/2025"
+            />
+          </div>
+
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Gelombang</th>
+                <th>Periode Pendaftaran</th>
+                <th>Tes Masuk</th>
+                <th>Pengumuman</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gelombang 1</td>
+                <td>Januari - Februari 2024</td>
+                <td>Akhir Februari 2024</td>
+                <td>Awal Maret 2024</td>
+              </tr>
+              <tr>
+                <td>Gelombang 2</td>
+                <td>Maret - April 2024</td>
+                <td>Akhir April 2024</td>
+                <td>Awal Mei 2024</td>
+              </tr>
+              <tr>
+                <td>Gelombang 3</td>
+                <td>Mei - Juni 2024</td>
+                <td>Akhir Juni 2024</td>
+                <td>Awal Juli 2024</td>
+              </tr>
+              <tr>
+                <td>Gelombang 4</td>
+                <td>Juli - Agustus 2024</td>
+                <td>Akhir Agustus 2024</td>
+                <td>Awal September 2024</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-box">
+            <h4>⏰ Informasi Penting</h4>
+            <p>
+              Pendaftaran dibuka sepanjang tahun. Semakin awal Anda mendaftar,
+              semakin besar peluang untuk mendapatkan beasiswa dan pilihan
+              program studi yang diinginkan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Documents Section -->
+      <section class="application-section">
+        <h2 class="section-title">E. Dokumen yang Diperlukan</h2>
+        <div class="section-content">
+          <ul class="steps-list">
+            <li data-step="📄">
+              Form Pengajuan Sidang Proposal -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Sidang Skripsi -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Transkrip Sementara -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Judul Proposal -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Cuti -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Sidang PKL Informatika -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+            <li data-step="📄">
+              Form Pengajuan Transkrip ACC Nol SKS Informatika -
+              <a
+                href="#"
+                style="color: #c41e3a; text-decoration: none; font-weight: 600"
+                >Download</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Siap Memulai Perjalanan Anda?</h2>
+        <p>
+          Bergabunglah dengan ribuan mahasiswa yang telah mempercayakan masa
+          depan mereka di Universitas Teknokrat Indonesia
+        </p>
+        <a
+          href="http://spmb.teknokrat.ac.id/"
+          class="cta-button"
+          target="_blank"
+          >Daftar Sekarang</a
+        >
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tentang UTI</h3>
+          <ul>
+            <li>
+              <a href="https://teknokrat.ac.id/" target="_blank"
+                >Tentang Universitas</a
+              >
+            </li>
+            <li>
+              <a href="https://ftik.teknokrat.ac.id/" target="_blank"
+                >Fakultas Teknik</a
+              >
+            </li>
+            <li>
+              <a href="https://teknokrat.ac.id/accreditation/" target="_blank"
+                >Akreditasi</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <ul>
+            <li>
+              <a href="https://siakad.teknokrat.ac.id/" target="_blank"
+                >Sistem Informasi Akademik</a
+              >
+            </li>
+            <li>
+              <a href="https://perpustakaan.teknokrat.ac.id/" target="_blank"
+                >Perpustakaan</a
+              >
+            </li>
+            <li>
+              <a href="http://e-parent.teknokrat.ac.id/" target="_blank"
+                >e-Parent</a
+              >
+            </li>
+            <li>
+              <a href="https://ejurnal.teknokrat.ac.id/" target="_blank"
+                >e-Journal</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <ul>
+            <li>Jl. ZA. Pagar Alam No.9-11</li>
+            <li>Labuhan Ratu, Bandar Lampung</li>
+            <li>Telp: (0721) 702022</li>
+            <li>Email: info@teknokrat.ac.id</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Universitas Teknokrat Indonesia. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- fungsi js -->
+    <script>
+      // fungsi untuk tombol home
+      function home() {
+        location.href = "Home.html";
+      }
+      // fungsi ke halaman profil
+      function profil() {
+        location.href = "Profil.html";
+      }
+      // fungsi ke halaman academic
+      function academic() {
+        location.href = "Academic.html";
+      }
+      // fungsi ke halaman facility
+      function facility() {
+        location.href = "Facility.html";
+      }
+      // fungsi ke halaman admission
+      function admission() {
+        location.href = "Admission.html";
+      }
+      // fungsi ke halaman scholarship
+      function scholarship() {
+        location.href = "Scholarship.html";
+      }
+      // fungsi ke halaman student affairs
+      function studentAffairs() {
+        location.href = "StudentAffairs.html";
+      }
+      // fungsi ke halaman online application form
+      function onlineApplicationForm() {
+        location.href = "OnlineApplicationForm.html";
+      }
+      // fungsi ke halaman download files
+      function downloadFiles() {
+        location.href = "DownloadFiles.html";
+      }
+    </script>
+  </body>
+</html>

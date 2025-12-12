@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Application Form - Universitas Teknokrat Indonesia</title>
+    <link rel="stylesheet" type="text/css" href="eksternal.css" />
+    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8f9fa;
+      }
+
+      /* Hero Banner */
+      .hero-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 100px 50px 150px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-banner::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23f8f9fa" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>')
+          no-repeat bottom center;
+        background-size: cover;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 0.8s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-content .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+
+      .hero-content h1 {
+        font-size: 52px;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 30px;
+        line-height: 1.8;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: white;
+        color: #667eea;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: #667eea;
+      }
+
+      /* Main Container */
+      .container {
+        max-width: 1200px;
+        margin: -80px auto 50px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* Info Cards */
+      .info-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 50px;
+      }
+
+      .info-card {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+
+      .info-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .info-card .icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      .info-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 12px;
+      }
+
+      .info-card p {
+        color: #718096;
+        line-height: 1.7;
+        font-size: 15px;
+      }
+
+      /* Application Steps */
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: #718096;
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .steps-container {
+        background: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 50px;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .step-item {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 15px;
+        background: #f8f9fa;
+        transition: all 0.3s ease;
+      }
+
+      .step-item:hover {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        transform: scale(1.05);
+      }
+
+      .step-item .step-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        font-weight: 700;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .step-item:hover .step-number {
+        background: white;
+        color: #667eea;
+      }
+
+      .step-item h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #2d3748;
+      }
+
+      .step-item:hover h4,
+      .step-item:hover p {
+        color: white;
+      }
+
+      .step-item p {
+        color: #718096;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      /* Requirements Section */
+      .requirements-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .requirement-box {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .requirement-box h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #667eea;
+      }
+
+      .requirement-list {
+        list-style: none;
+      }
+
+      .requirement-list li {
+        padding: 15px 0 15px 40px;
+        color: #4a5568;
+        line-height: 1.6;
+        position: relative;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .requirement-list li:last-child {
+        border-bottom: none;
+      }
+
+      .requirement-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        padding: 80px 50px;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 50px;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+
+      .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .cta-content h2 {
+        font-size: 42px;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .cta-content p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-content .btn-primary {
+        background: white;
+        color: #667eea;
+        font-size: 18px;
+        padding: 18px 45px;
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+      }
+
+      .whatsapp-float svg {
+        width: 35px;
+        height: 35px;
+        fill: white;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-banner {
+          padding: 60px 20px 100px;
+        }
+
+        .hero-content h1 {
+          font-size: 36px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .requirements-section {
+          grid-template-columns: 1fr;
+        }
+
+        .steps-container {
+          padding: 30px 20px;
+        }
+
+        .section-title h2 {
+          font-size: 28px;
+        }
+
+        .cta-content h2 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- buat area header -->
+    <div class="header"></div>
+    <!-- buat area menu -->
+    <div class="navigation">
+      <button class="tombol" onclick="home()">Home</button>
+      <button class="tombol" onclick="profil()">Profil</button>
+      <button class="tombol" onclick="academic()">Academic</button>
+      <button class="tombol" onclick="facility()">Facility</button>
+      <button class="tombol" onclick="admission()">Admission</button>
+      <button class="tombol" onclick="scholarship()">Scholarship</button>
+      <button class="tombol" onclick="studentAffairs()">Student Affairs</button>
+      <button class="tombol" onclick="onlineApplicationForm()">
+        Online Application Form
+      </button>
+      <button class="tombol" onclick="downloadFiles()">Download Files</button>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <span class="badge">📋 PENDAFTARAN ONLINE</span>
+        <h1>Wujudkan Impian Anda Bersama Kami!</h1>
+        <p>
+          Bergabunglah dengan Universitas Teknokrat Indonesia dan raih masa
+          depan cemerlang. Proses pendaftaran mudah, cepat, dan dapat dilakukan
+          kapan saja.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://daftar.spmb.teknokrat.ac.id/register"
+            class="btn-primary"
+            >🚀 Daftar Sekarang</a
+          >
+          <a href="#info" class="btn-secondary">📖 Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Info Cards -->
+      <div id="info" class="info-cards">
+        <div class="info-card">
+          <div class="icon">🎯</div>
+          <h3>Mudah & Cepat</h3>
+          <p>
+            Proses pendaftaran online yang simpel dan efisien, hanya butuh
+            beberapa menit untuk melengkapi formulir.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">💰</div>
+          <h3>Biaya Terjangkau</h3>
+          <p>
+            Berbagai pilihan program beasiswa dan cicilan yang memudahkan Anda
+            untuk kuliah tanpa beban finansial.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🏆</div>
+          <h3>Terakreditasi</h3>
+          <p>
+            Program studi berkualitas dengan akreditasi nasional dan
+            internasional yang diakui industri.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🌟</div>
+          <h3>Fasilitas Lengkap</h3>
+          <p>
+            Kampus modern dengan lab terkini, perpustakaan digital, dan area
+            pembelajaran yang nyaman.
+          </p>
+        </div>
+      </div>
+
+      <!-- Application Steps -->
+      <div class="section-title">
+        <h2>Langkah Pendaftaran</h2>
+        <p>
+          Ikuti 5 langkah mudah berikut untuk memulai perjalanan akademik Anda
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <h4>Buat Akun</h4>
+            <p>
+              Daftar dan buat akun pendaftaran online dengan email dan data diri
+              Anda
+            </p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <h4>Pilih Program Studi</h4>
+            <p>Pilih program studi yang sesuai dengan minat dan passion Anda</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <h4>Lengkapi Data</h4>
+            <p>Isi formulir pendaftaran dan upload dokumen yang diperlukan</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <h4>Bayar Biaya Pendaftaran</h4>
+            <p>Lakukan pembayaran biaya pendaftaran melalui virtual account</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <h4>Ikuti Tes Seleksi</h4>
+            <p>
+              Ikuti tes seleksi online atau offline sesuai jadwal yang
+              ditentukan
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Requirements -->
+      <div class="section-title">
+        <h2>Persyaratan Pendaftaran</h2>
+        <p>Pastikan Anda melengkapi semua dokumen yang dibutuhkan</p>
+      </div>
+
+      <div class="requirements-section">
+        <div class="requirement-box">
+          <h3>📄 Dokumen Wajib</h3>
+          <ul class="requirement-list">
+            <li>Fotocopy Ijazah/STTB yang dilegalisir</li>
+            <li>Fotocopy Rapor Semester 1-6 yang dilegalisir</li>
+            <li>Fotocopy KTP & Kartu Keluarga</li>
+            <li>Pas foto berwarna ukuran 3x4 (3 lembar)</li>
+            <li>Surat Keterangan Sehat dari Dokter</li>
+            <li>Bukti pembayaran biaya pendaftaran</li>
+          </ul>
+        </div>
+        <div class="requirement-box">
+          <h3>✨ Dokumen Tambahan</h3>
+          <ul class="requirement-list">
+            <li>Sertifikat prestasi (jika ada)</li>
+            <li>Surat rekomendasi dari sekolah</li>
+            <li>Portfolio karya (untuk prodi tertentu)</li>
+            <li>Surat keterangan tidak buta warna</li>
+            <li>Piagam/sertifikat kegiatan organisasi</li>
+            <li>Dokumen pendukung lainnya</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-content">
+          <h2>Siap Menjadi Bagian dari Keluarga Teknokrat?</h2>
+          <p>
+            Jangan lewatkan kesempatan emas ini! Daftar sekarang dan raih masa
+            depan cerah bersama kami. Tim kami siap membantu Anda 24/7.
+          </p>
+          <a
+            href="https://daftar.spmb.teknokrat.ac.id/register"
+            class="btn-primary"
+            >Daftar Sekarang Juga! 🚀</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Copyright &copy; 2025 - Universitas Teknokrat Indonesia</p>
+      <p style="margin-top: 10px; font-size: 14px">
+        Kampusnya Sang Juara | #SangJuaraMuda
+      </p>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a
+      href="https://api.whatsapp.com/send?phone=6288268085279&text=Hallo%20Teknokrat..%0ASaya%20ingin%20menanyakan%20informasi%20terkait%20SPMB.."
+      target="_blank"
+      class="whatsapp-float"
+    >
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M27.281 4.65C24.609 1.976 21.057 0.547 17.297 0.547c-7.389 0-13.401 6.011-13.401 13.401c0 2.36 0.615 4.667 1.787 6.693L4 27.547l7.031-1.844c1.943 1.063 4.133 1.619 6.349 1.619c7.391 0 13.401-6.011 13.401-13.401c0-3.579-1.391-6.943-3.917-9.469zM17.297 24.745c-2 0-3.959-0.537-5.677-1.547l-0.407-0.24l-4.219 1.104l1.125-4.104l-0.265-0.423c-1.107-1.761-1.693-3.797-1.693-5.901c0-6.145 5-11.145 11.151-11.145c2.975 0 5.76 1.161 7.849 3.251c2.089 2.089 3.239 4.864 3.239 7.839c0 6.145-5.016 11.167-11.167 11.167zm6.115-8.333c-0.333-0.167-1.984-0.979-2.291-1.093c-0.307-0.099-0.531-0.151-0.755 0.167s-0.869 1.093-1.063 1.317c-0.192 0.224-0.385 0.251-0.719 0.083c-0.333-0.167-1.412-0.521-2.688-1.656c-0.991-0.885-1.661-1.979-1.855-2.313c-0.192-0.333-0.021-0.515 0.145-0.681c0.151-0.147 0.333-0.385 0.5-0.577c0.167-0.192 0.224-0.333 0.333-0.557c0.109-0.224 0.052-0.417-0.025-0.583c-0.077-0.167-0.755-1.819-1.036-2.491c-0.271-0.655-0.552-0.567-0.755-0.577c-0.195-0.009-0.417-0.011-0.641-0.011s-0.588 0.083-0.896 0.417c-0.307 0.333-1.177 1.151-1.177 2.805s1.203 3.251 1.371 3.475c0.167 0.224 2.364 3.609 5.729 5.063c0.801 0.344 1.427 0.552 1.912 0.708c0.803 0.255 1.531 0.219 2.109 0.135c0.644-0.093 1.984-0.812 2.265-1.595c0.281-0.787 0.281-1.463 0.197-1.604c-0.083-0.14-0.307-0.224-0.641-0.391z"
+        />
+      </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+      // Fungsi navigasi
+      function home() {
+        location.href = "Home.html";
+      }
+      function profil() {
+        location.href = "Profil.html";
+      }
+      function academic() {
+        location.href = "Academic.html";
+      }
+      function facility() {
+        location.href = "Facility.html";
+      }
+      function admission() {
+        location.href = "Admission.html";
+      }
+      function scholarship() {
+        location.href = "Scholarship.html";
+      }
+      function studentAffairs() {
+        location.href = "StudentAffairs.html";
+      }
+      function onlineApplicationForm() {
+        location.href = "OnlineApplicationForm.html";
+      }
+      function downloadFiles() {
+        location.href = "DownloadFiles.html";
+      }
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

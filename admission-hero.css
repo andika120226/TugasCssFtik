@@ -1,0 +1,331 @@
+/* Admission Hero Section - Universitas Teknokrat Indonesia */
+
+/* Hero Section dengan Background */
+.admission-hero {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Pattern */
+.admission-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.admission-hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Content */
+.admission-hero-left {
+  padding-right: 40px;
+}
+
+.admission-hero-left .university-name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2d3748;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.admission-hero-left h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.admission-hero-left .hashtag {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 40px;
+}
+
+.admission-hero-left .cta-button {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  padding: 15px 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.admission-hero-left .cta-button:hover {
+  background: white;
+  color: #fda085;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Content - Image Area */
+.admission-hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admission-hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+.admission-hero-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* QR Code Box */
+.qr-box {
+  position: absolute;
+  bottom: 20px;
+  right: -50px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 3;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.qr-box .qr-title {
+  background: #000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  font-size: 14px;
+  margin: -25px -25px 15px -25px;
+}
+
+.qr-box .qr-code {
+  width: 150px;
+  height: 150px;
+  background: #f0f0f0;
+  border: 3px solid #ddd;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+.qr-box .qr-url {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.qr-box .qr-url::before {
+  content: "🌐";
+  font-size: 16px;
+}
+
+.qr-box .qr-help {
+  background: #dc2626;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.qr-box .qr-help::before {
+  content: "💬";
+  font-size: 14px;
+}
+
+/* Language Selector */
+.language-selector {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: white;
+}
+
+.lang-btn:hover:not(.active) {
+  background: #f7fafc;
+}
+
+.lang-btn img {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float-admission {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float-admission:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-float-admission svg {
+  width: 35px;
+  height: 35px;
+  fill: white;
+}
+
+.whatsapp-float-admission .tooltip {
+  position: absolute;
+  right: 70px;
+  background: white;
+  color: #2d3748;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float-admission:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .admission-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .admission-hero-left {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .admission-hero-left h1 {
+    font-size: 42px;
+  }
+
+  .qr-box {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admission-hero {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .admission-hero-left h1 {
+    font-size: 32px;
+  }
+
+  .admission-hero-left .cta-button {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .language-selector {
+    bottom: 20px;
+    left: 20px;
+    transform: none;
+  }
+}
